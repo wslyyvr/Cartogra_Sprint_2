@@ -1,0 +1,174 @@
+@use "./partials/base";
+@use "./partials/header";
+@use "./partials/blocks/cta";
+@use "./partials/blocks/hero";
+@use "./partials/blocks/location-hero";
+@use "./partials/blocks/location-list";
+@use "./partials/blocks/cta-banner";
+@use "./partials/blocks/banner";
+@use "./partials/blocks/steps-list";
+@use "./partials/blocks/tags-list";
+@use "./partials/blocks/featured-destinations";
+@use "./partials/blocks/excursion-list";
+@use "./partials/blocks/vibes-section";
+@use "./partials/blocks/vibes-list";
+@use "./partials/blocks/featured-excursions";
+@use "./partials/blocks/excursion-list-wrapper";
+@use "./partials/blocks/featured-excursion-images";
+@use "./partials/blocks/get-started-section";
+@use "./partials/footer";
+
+//for submited form
+.hero__image {
+  /*margin-top:82px;*/
+  width:100%;
+  height: 502px;
+  background-image: url("../assets/images/contact-page-banner.jpg");
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat; 
+  /*background-size: 100%;    */
+  /*background-position:60% 36%;/* 横向偏左右不变，纵向偏上20% */
+  border: 1px solid transparent; 
+  margin-bottom: 415px;
+}
+
+.hero__image-info{
+  width: 72.94%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 221.4px;
+  background-color:#FFFFFF ;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;     
+  justify-content: center; 
+  /*border: 1px solid blue ;*/
+
+  img{
+    height: 59px;
+    aspect-ratio: 1 / 1; 
+    margin-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2{
+    width: 44.79%;
+    font-family: "Albert Sans";
+    font-weight: 600;
+    font-size: 56px;
+    // leading-trim: NONE;
+    line-height: 63px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #00A08D;
+    margin:0;
+    padding: 0;
+    /*border: 1px solid red ;*/
+  }
+
+  p{
+    font-family: Albert Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 22px;
+    color:#252525;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: center;
+    /*width: 75%;*/
+    width: 66%;
+    /*height: 96px;*/
+    // border: 1px solid red ;
+  }
+
+  a{
+    text-decoration: none;
+    background-color: #004F62;
+    border-radius: 8px;
+    padding-top: 13px ;
+    padding-bottom: 13px;
+    padding-left: 36px ;
+    padding-right: 36px ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 62px;
+    font-family: "Albert Sans", sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    color: #FFFFFF;
+    // leading-trim: NONE;
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
+}
+
+
+/* ------------------ 768px ------------------ */
+@media(max-width: 768px){
+
+  .hero__image-info{
+    width: 81.25%;
+    margin-top: 185px;
+
+    img{
+      margin-top: 48px;
+    }
+
+    h2{
+      width: 73.55%;
+    }
+
+    p{
+      width: 81.43%;
+    }
+
+    a{
+      margin-bottom: 48px;
+    }
+  }
+}
+
+
+/* ------------------ 320px ------------------ */
+@media(max-width: 320px){
+
+  .hero__image{
+    position: relative;
+    height: 209px;
+    margin-bottom: 0px;
+  }
+
+  .hero__image-info{
+    position: static;
+    width: 100%;
+    /*margin-top: 300px;*/
+    /*border: 1px solid green ;*/
+
+    img{
+      margin-top: 22px;
+    }
+
+    h2{
+      width: 87.5%;
+      font-size: 32px;
+      line-height: 41px;
+    }
+
+    p{
+      width: 87.5%;
+    }
+
+    a{
+      margin-bottom: 22px;
+      padding-left: 85.5px ;
+      padding-right: 85.5px ;
+    }
+  }
+}
+
+
