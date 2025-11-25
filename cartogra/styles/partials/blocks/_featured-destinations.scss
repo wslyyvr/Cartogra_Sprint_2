@@ -1,0 +1,363 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.featured-destinations {
+  @extend %wrapper;
+  text-align: center;
+  padding: 0 pxToRem(16);
+  margin-bottom: pxToRem(86);
+  @include tablet {
+    padding: 0;
+  }
+  &__intro-title {
+    font-family: "Literata", serif;
+    font-size: pxToRem(42);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: pxToRem(-2.04);
+    color: $color-primary-dark;
+    @include tablet {
+      font-size: pxToRem(68);
+      line-height: 1.06;
+    }
+  }
+  &__intro-text {
+    color: $color-gray-dark;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    line-height: 1.31;
+  }
+  &__image-grid {
+    margin: pxToRem(24) 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: pxToRem(32);
+    @include tablet {
+    }
+  }
+  &__link {
+    text-decoration: none;
+    display: inline-flex;
+    width: 100%;
+    @include tablet {
+      width: calc(33.333% - pxToRem(32));
+    }
+  }
+  &__image-card {
+    text-align: left;
+  }
+  &__image-wrapper {
+    position: relative;
+  }
+  &__image {
+    border-radius: 16px;
+    width: 100%;
+  }
+  &__title {
+    color: $color-accent;
+    font-size: pxToRem(24);
+    font-weight: 700;
+    margin: pxToRem(32) 0 pxToRem(8) 0;
+  }
+  &__description {
+    color: $color-gray-dark;
+    font-size: pxToRem(16);
+    line-height: 1.31;
+    margin: 0 0 pxToRem(8) 0;
+  }
+  &__price {
+    color: $color-text-dark;
+    font-size: pxToRem(22);
+    font-weight: 700;
+    margin: 0;
+  }
+  &__vibes-wrapper {
+    position: absolute;
+    bottom: pxToRem(26);
+    right: pxToRem(17);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    gap: pxToRem(16);
+  }
+  &__vibe {
+    display: inline-flex;
+    text-decoration: none;
+    color: $color-white;
+    font-size: pxToRem(14);
+    font-weight: 700;
+    border-radius: 32px;
+    padding: pxToRem(4) pxToRem(8);
+    background: $color-primary-dark;
+  }
+}
+.featured-destinations_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto 70px;
+  width: 82.91%;
+  // border: 1px solid green;
+  gap: 100px;
+  .featured-destinations__intro-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 22.23%;
+    width: 55.52%;
+    margin-top: 70px;
+    margin-bottom: -40px; // Original gap was 100, actual is 60
+    h2 {
+      font-family: "Literata", serif;
+      font-size: 4.25rem;
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -0.1275rem;
+      color: #004f62;
+      margin: 0;
+      white-space: nowrap;
+    }
+    p {
+      font-family: "Albert Sans", sans-serif;
+      color: #585858;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.31;
+      width: 68.77%;
+      text-align: center;
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
+  }
+  .featured-destinations__destinations {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.4%;
+    img {
+      width: 48.4%;
+      aspect-ratio: 1/1; // Maintain square
+      object-fit: cover;
+      border-radius: 16px;
+      // border: 1px solid blue;
+    }
+    .featured-destinations_details {
+      width: 48.4%;
+      height: 578px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .featured-destinations_details-imgs {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        img {
+          width: 28.86%;
+          aspect-ratio: 1/1;// Maintain square
+          border-radius: 16px;
+          margin-top: 6.5px;
+          margin-bottom: 6.5px;
+          // Reserved space to display 4 images on mobile
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+      h2 {
+        font-family: "Literata", serif;
+        font-size: 2.93rem;
+        font-weight: 500;
+        color: #004f62;
+        margin: 0;
+        line-height: 49px;
+        display: inline-block;
+      }
+      .featured-destinations_details-tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2.78%;
+        a {
+          text-decoration: none;
+          font-family: "Albert Sans", sans-serif;
+          color: #fff;
+          font-size: 0.875rem;
+          font-weight: 400;
+          padding: 4px 1.39%;
+          background-color: #004f62;
+          border-radius: 32px;
+        }
+      }
+      h3 {
+        font-family: "Albert Sans", sans-serif;
+        font-size: 1.375rem;
+        font-weight: 500;
+        color: #323334;
+        margin: 0;
+        line-height: 100%;
+        display: inline-block;
+      }
+      p {
+        font-family: "Albert Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #585858;
+        width: 71.65%;
+        margin: 0;
+        // border: 1px solid red;
+        line-height: 100%;
+        display: inline-block;
+      }
+      .featured-destinations_details-button {
+        text-decoration: none;
+        font-family: "Albert Sans", sans-serif;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 800;
+        line-height: 18px;
+        padding: 13px 6.29%;
+        background-color: #004f62;
+        border-radius: 8px;
+        align-self: flex-start; 
+      }
+    }
+    // Fix spacing of 70px with the next section
+    &:last-child {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+// Tablet width is 768px (according to Figma design)
+@media (max-width: 768px){
+  .featured-destinations_block {
+    width: 100%;
+    .featured-destinations__intro-title {
+      margin-left: 6.83%;
+      width: 87.32%; 
+      // border: 1px solid red;
+    }
+    .featured-destinations__destinations {
+      width: 80.35%;
+      // border: 1px solid green;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 41px;
+      margin-left: 11.91%;
+      img {
+        width: 100%;
+      }
+      // From the third child onward, odd items (3, 5, 7...) have image on top, text below
+      &:nth-child(n + 3):nth-child(odd) {
+        > img {
+          order: -1;
+        }
+        > .featured-destinations_details {
+          order: 0;
+        }
+      }
+      .featured-destinations_details {
+        width: 100%;
+        height: 515px;
+        gap: 30px;
+        .featured-destinations_details-imgs {
+          img {
+            width: 28.52%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablet width is 320px (according to Figma design)
+@media (max-width: 320px){
+  .featured-destinations_block {
+    width: 100%;
+
+    .featured-destinations__intro-title {
+      margin-left: auto;
+      margin-right: auto;
+      width: 86.32%;
+      // border: 1px solid red;
+
+      h2 {
+        font-size: 2.25rem;
+        text-align: center;
+        white-space: normal;
+      }
+
+      p {
+        margin-top: 24px;
+        width: 100%;
+        padding-left: 0;
+        // border: 1px solid red;
+      }
+    }
+
+    .featured-destinations__destinations {
+      width: 86.32%;
+      height: 571px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 100px;
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        display: none;
+      }
+
+      .featured-destinations_details {
+        width: 100%;
+        height: 100px;
+        // border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .featured-destinations_details-imgs {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 8px 8px; // First is row gap, second is column gap
+          width: 100%;
+          // border: 1px solid blue;
+
+          img {
+            display: block;
+            margin-top: 0;
+            width: 47.36%;
+            aspect-ratio: 1/1;// Maintain square
+            border-radius: 16px;
+          }
+
+          img:first-child {
+            display: block;
+          }
+        }
+
+        h2 {
+          font-size: 1.375rem; 
+        }
+
+        .featured-destinations_details-tags {
+          gap: 8px 2.78%; // Row gap and column gap
+        }
+
+        p {
+
+          width: 100%;
+
+        }
+      }
+    }
+  }
+}

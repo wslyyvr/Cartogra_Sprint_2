@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartogra - Travel Enrollment Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../styles/travelEnrollmentFormCSS.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__wrapper">
+        <a href="../index.html">
+          <img src="./../assets/logos/cartogra.svg" alt="Cartogra logo" />
+        </a>
+        <nav class="primary-nav">
+          <ul class="primary-nav__list">
+            <li class="primary-nav__item">
+              <a class="primary-nav__link" href="#">Travel Vibes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero__image">
+
+      <h2>Stop planning. Start packing.</h2>
+      <p>Just fill out the form below and one of our Travel Team members will reach out to start booking your trip.</p>
+      <img src="../assets/icons/arrow-icon.svg" alt="Cartogra logo" />
+    </section>
+
+    <form class="travel-info__collection" novalidate>
+      <div>
+        <label for="travel-info__collection__getFirstNamet"> First Name </label>
+        <input type="text" name="first-name" id="travel-info__collection__getFirstName" required placeholder="Type First Name">
+      </div>
+      <div>
+        <label for="travel-info__collection__getLastNamet"> Last Name </label>
+        <input type="text" name="last-name" id="travel-info__collection__getLastName" required placeholder="Type Last Name">
+      </div>
+      <div>
+        <label for="travel-info__collection__getEmail"> Email </label>
+        <input type="text" name="email" id="travel-info__collection__getEmail" required placeholder="Type email address">
+      </div>
+      <div>
+        <label for="travel-info__collection__getPhone"> Phone </label>
+        <input type="text" name="phone" id="travel-info__collection__getPhone" required placeholder="Type phone number  ">
+      </div>
+      <div class="select-wrapper">
+        <label for="travel-info__collection__getDestination"> Destination </label>
+        <select id="travel-info__collection__getDestination" name="destination">
+          <!-- <option value="Amalfi Coast">Amalfi Coast-1</option> -->
+         
+        </select>
+      </div>
+      <div class="check-wrapper">
+        <input type="checkbox" name="checkInfo" id="travel-info__collection__getCheck">
+        <label for="travel-info__collection__getCheck">
+          <span class="checkmark"></span>
+          <p class="info">I agree to be contacted by the Cartogra Travel Team to begin the process of planning my trip. This does not mean I am obligated to book a trip through Cartogra or at all. No payment information is being collected at this time.</p>
+        </label>
+     </div>
+      <button type="submit"> SUBMIT FORM </button>
+    </form>
+
+
+    <footer class="site-footer">
+      <div class="site-footer__wrapper">
+        <section class="site-footer__top-section">
+          <div class="site-footer__links-wrapper">
+            <div>
+              <h3 class="site-footer__title">Travel Vibes</h3>
+              <ul class="site-footer__list">
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Browse by Vibe</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Browse Map</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Search</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="site-footer__title">Destinations</h3>
+              <ul class="site-footer__list">
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Travel Packages</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Destinations</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Excursions</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="site-footer__title">About Us</h3>
+              <ul class="site-footer__list">
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Our Story</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Our Approach</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Our Team</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Press & Media Kit</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="site-footer__about-wrapper">
+            <img src="./../assets/logos/cartogra.svg" alt="Cartogra logo" />
+            <p>
+              Find your place by how you want to feel. We match destinations to
+              your mood whether it be adventure, calm, connection, or wonder.
+              Simple, intuitive, and curated for the vibe you're after.
+            </p>
+          </div>
+        </section>
+
+        <section class="site-footer__bottom-section">
+          <ul class="site-footer__list site-footer__list--social">
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">
+                <img src="./../assets/icons/tiktok.svg" alt="TikTok icon" />
+              </a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#"
+                ><img src="./../assets/icons/facebook.svg" alt="Facebook icon"
+              /></a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#"
+                ><img src="./../assets/icons/instagram.svg" alt="Instagram icon"
+              /></a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#"
+                ><img src="./../assets/icons/x.svg" alt="X (formerly Twitter) icon"
+              /></a>
+            </li>
+          </ul>
+          <p>Copyright &copy;2025 Cartogra LLC. All rights reserved.</p>
+          <ul class="site-footer__list site-footer__list--terms">
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Terms</a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Privacy Policy</a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Compliance</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+        <script src="../script/travelEnrollmentFormScript.js"></script>
+  </body>
+</html>
+
+
